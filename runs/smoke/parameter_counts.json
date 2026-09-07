@@ -1,0 +1,10 @@
+{
+  "head": {
+    "total": 149606402,
+    "trainable": 592130
+  },
+  "lora": {
+    "total": 149819140,
+    "trainable": 212738
+  }
+}

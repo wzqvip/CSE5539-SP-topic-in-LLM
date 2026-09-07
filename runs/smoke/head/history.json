@@ -1,0 +1,11 @@
+{
+  "train_accuracy": [
+    0.8125
+  ],
+  "validation_accuracy": [
+    0.5
+  ],
+  "test_accuracy": null,
+  "best_epoch": 1,
+  "best_validation_accuracy": 0.5
+}
