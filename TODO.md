@@ -9,4 +9,4 @@
 - [X] Check `parameter_counts.json`; LoRA is in the same order-of-magnitude parameter ballpark as head tuning.
 - [X] Use the best validation checkpoint; SST-2 test labels are unavailable, so test accuracy is `null`.
 - [X] Copy the validation accuracies from `runs/modernbert-sst2/table1.md` into the homework Table 1.
-- [ ] Add the GitHub or Colab link to `HOMEWORK.md` and the submitted report.
+- [X] Add the GitHub or Colab link to `HOMEWORK.md` and the submitted report.

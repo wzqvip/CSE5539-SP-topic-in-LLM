@@ -2,7 +2,9 @@
 
 This document organizes the answers and experiments requested by `homework.pdf`.
 The code and generated artifacts live in this repository so that empirical claims
-can be reproduced.
+can be reproduced.  Github Repo: [wzqvip/CSE5539-SP-topic-in-LLM](https://github.com/wzqvip/CSE5539-SP-topic-in-LLM)
+
+
 
 ## 1. Transformer architecture
 
@@ -186,7 +188,7 @@ loss.
 The main reference is Vaswani et al., *Attention Is All You Need*:
 https://arxiv.org/abs/1706.03762.
 
-### AI assistance disclosure
+### AI assistance disclosure 
 
 ChatGPT was used to assist with the project documentation, fix coding problems,  and organization of results. 
 
