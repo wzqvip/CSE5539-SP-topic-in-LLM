@@ -64,6 +64,5 @@ The repository includes a successful small smoke run in `runs/smoke/`. Its numbe
 
 Head tuning updates only the final classification layer. LoRA keeps the pretrained model frozen and injects low-rank trainable matrices into ModernBERT attention/MLP projections. The script reports trainable parameter counts so the LoRA rank can be adjusted to stay in the same order of magnitude as the head-only experiment.
 
-See [HOMEWORK.md](HOMEWORK.md) for the organized answer and [TODO.md](TODO.md)
-for the remaining machine-dependent submission steps.
+See [HOMEWORK.md](HOMEWORK.md) for the organized answer.
 
