@@ -1,0 +1,32 @@
+{
+  "head": {
+    "train_accuracy": [
+      0.7985864675050854,
+      0.8095591619771637,
+      0.8110588130484492
+    ],
+    "validation_accuracy": [
+      0.8107798165137615,
+      0.823394495412844,
+      0.8211009174311926
+    ],
+    "test_accuracy": null,
+    "best_epoch": 2,
+    "best_validation_accuracy": 0.823394495412844
+  },
+  "lora": {
+    "train_accuracy": [
+      0.9307784822343316,
+      0.9509124114686187,
+      0.9570297999970304
+    ],
+    "validation_accuracy": [
+      0.9323394495412844,
+      0.9426605504587156,
+      0.9472477064220184
+    ],
+    "test_accuracy": null,
+    "best_epoch": 3,
+    "best_validation_accuracy": 0.9472477064220184
+  }
+}

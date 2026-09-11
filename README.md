@@ -1,6 +1,10 @@
 # CSE 5539 Homework: ModernBERT on SST-2
 
-This folder contains the implementation for homework sections 4.1 and 4.2:
+This repository contains an organized implementation and write-up for the
+homework. `HOMEWORK.md` answers the theory questions and documents the
+empirical experiments in sections 2.3, 3.2, 4.1, and 4.2.
+
+The ModernBERT implementation covers sections 4.1 and 4.2:
 
 - head tuning: freeze the ModernBERT backbone and train only the classifier head;
 - LoRA tuning: train a small LoRA adapter with a comparable trainable-parameter budget.
@@ -20,6 +24,18 @@ For a CUDA machine, install the PyTorch build appropriate for the installed CUDA
 
 ## Run
 
+Run the language-model experiment from section 2.3:
+
+```powershell
+python run_lm_experiments.py
+```
+
+Run the SGD trajectory experiment from section 3.2:
+
+```powershell
+python visualize_sgd.py
+```
+
 Run a quick end-to-end smoke test first:
 
 ```powershell
@@ -38,7 +54,7 @@ The script downloads `answerdotai/ModernBERT-base` and the GLUE SST-2 dataset fr
 - `metrics.json`: best validation and test metrics;
 - `parameter_counts.json`: total and trainable parameter counts;
 - `table1.md`: the table to copy into the report;
-- `head_tuning/` and `lora/`: best model checkpoints.
+- `head/` and `lora/`: best model checkpoints.
 
 The script selects the checkpoint with the highest validation accuracy. SST-2's public test split may not expose labels; in that case the script records `test_accuracy` as `null` and the validation result remains the reproducible Table 1 metric.
 
@@ -48,5 +64,6 @@ The repository includes a successful small smoke run in `runs/smoke/`. Its numbe
 
 Head tuning updates only the final classification layer. LoRA keeps the pretrained model frozen and injects low-rank trainable matrices into ModernBERT attention/MLP projections. The script reports trainable parameter counts so the LoRA rank can be adjusted to stay in the same order of magnitude as the head-only experiment.
 
-See [TODO.md](TODO.md) for the remaining report and local-run checklist.
+See [HOMEWORK.md](HOMEWORK.md) for the organized answer and [TODO.md](TODO.md)
+for the remaining machine-dependent submission steps.
 

@@ -53,7 +53,7 @@ def limit_split(dataset, limit: int | None):
 
 
 def prepare_data(tokenizer, args: argparse.Namespace) -> tuple[DatasetDict, DataCollatorWithPadding]:
-    dataset = load_dataset("glue", "sst2")
+    dataset = load_dataset("nyu-mll/glue", "sst2")
 
     def tokenize(batch):
         return tokenizer(batch["sentence"], truncation=True, max_length=args.max_length)
@@ -106,10 +106,11 @@ def evaluate(model, loader, device) -> float | None:
     correct = 0
     total = 0
     for batch in loader:
+        batch = move_batch(batch, device)
         labels = batch.get("labels")
         if labels is None or torch.any(labels < 0):
             return None
-        outputs = model(**move_batch(batch, device))
+        outputs = model(**batch)
         predictions = outputs.logits.argmax(dim=-1)
         correct += (predictions == labels).sum().item()
         total += labels.numel()
